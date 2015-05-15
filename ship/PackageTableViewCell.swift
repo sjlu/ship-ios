@@ -17,13 +17,15 @@ class PackageTableViewCell: UITableViewCell {
 
         let screenSize: CGRect = UIScreen.mainScreen().bounds
 
-        nameLabel = UILabel(frame: CGRect(x: 20, y: 25, width: screenSize.width-40, height: 20))
+        nameLabel = UILabel(frame: CGRect(x: 20, y: 20, width: screenSize.width-40, height: 30))
         nameLabel?.font = UIFont.primaryFontBoldWithSize(20)
         self.addSubview(nameLabel!)
 
-        dateAndStatusLabel = UILabel(frame: CGRect(x: 20, y: 50, width: screenSize.width-40, height: 20))
+        dateAndStatusLabel = UILabel(frame: CGRect(x: 20, y: 45, width: screenSize.width-40, height: 30))
         dateAndStatusLabel?.font = UIFont.primaryFontWithSize(16)
         self.addSubview(dateAndStatusLabel!)
+
+        
 
     }
 

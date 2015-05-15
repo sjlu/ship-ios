@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ListPackagesViewController: UITableViewController, UISearchBarDelegate {
+class ListPackagesViewController: UITableViewController {
 
     var data: NSMutableArray?
     //    var disableViewOverlay: UIView?
@@ -24,6 +24,8 @@ class ListPackagesViewController: UITableViewController, UISearchBarDelegate {
 //        self.view.backgroundColor = UIColor.lightGrayColor()
 
         self.data = NSMutableArray()
+
+        self.tableView.separatorInset = UIEdgeInsetsZero
 
         getPackages()
     }

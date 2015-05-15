@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Globals
         UILabel.appearance().font = UIFont.primaryFontWithSize(16)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont.primaryFontBoldWithSize(18)!]
 
         // app nav init
         navController = UINavigationController()
