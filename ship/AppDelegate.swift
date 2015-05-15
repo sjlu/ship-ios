@@ -12,9 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // window init
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.lightGrayColor()
+        window?.makeKeyAndVisible()
+
+        // Globals
+        UILabel.appearance().font = UIFont.primaryFontWithSize(16)
+
+        // app nav init
+        navController = UINavigationController()
+        var listPackagesViewController = ListPackagesViewController()
+        navController?.pushViewController(listPackagesViewController, animated: false)
+
+        window?.rootViewController = self.navController;
+        self.window?.makeKeyAndVisible()
+
         // Override point for customization after application launch.
         return true
     }
